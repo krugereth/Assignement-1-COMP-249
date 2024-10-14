@@ -6,7 +6,22 @@ import mav.MAV;
 import multirotor.Multirotor;
 import uav.UAV;
 
+/**
+ * Driver class that demonstrates the deep copying of an array of flying objects.
+ *
+ * Assignment 1 Part 2
+ * Written by: Ayush Patel (40285846) and Krishna Patel (40200870)
+ */
 public class Driver {
+
+    /**
+     * Creates and returns a deep copy of the given array of flying objects
+     * The method checks the type of each object and calls the respective
+     * copy constructor of the 7 classes to ensure a deep copy is made
+     *
+     * @param flyingObjects an array of flying objects to be copied
+     * @return a deep copy of the flyingObjects array
+     */
 
     public static Object[] copyFlyingObjects(Object[] flyingObjects) {
 
@@ -45,9 +60,13 @@ public class Driver {
         return copiedArray; //returns the copied array
     }
 
+    /**
+     * The main method where program execution begins. It creates a bunch of flying objects,
+     *  and performs a deep copy of the array of objects and then prints both the original and copied arrays.
+     */
     public static void main(String[] args) {
 
-        // 25 objects created with updated values
+        // 25 objects are created from the 7 classes
         Airplane a1 = new Airplane("Gulfstream", 135000.50, 1800);
         Airplane a2 = new Airplane("Delta", 60000.75, 3200);
         Airplane a3 = new Airplane("Spirit", 91000, 3700);
@@ -75,6 +94,8 @@ public class Driver {
         MAV mav2 = new MAV("DARPA", 250, 110, 105000);
         MAV mav3 = new MAV("Lockheed", 320, 60, 850000);
 
+        MAV mav4 = new MAV("MAV TEST", 100, 100, 100);
+
 
 
         //Array is declared and filled with objects from each of the 7 classes
@@ -86,7 +107,9 @@ public class Driver {
         Object[] copiedFlyingObjectsArray = copyFlyingObjects(flyingObjectsToBeCopied);
 
 
-        System.out.println("Here is the information of each element in the newly-copied array");
+        System.out.println("\nHere is the information of each element in the newly-copied array");
+        System.out.println("----------------------------------------------------------------------");
+
         //for each loop used to print the copied array (deep copy)
         for (Object obj : copiedFlyingObjectsArray) {
             System.out.println();
@@ -101,6 +124,19 @@ public class Driver {
             System.out.println(obj);
         }
 
+        //Replacing mav3 with mav4 to showcase the success of the deep copy method
+        flyingObjectsToBeCopied[18] = mav4;
+
+        System.out.println("\n\n---------------------------------------------------------------");
+        System.out.println("Here is the information of each element in the original array with a new MAV called MAV TEST that was added to show the deep copy method worked.");
+        for (Object obj: flyingObjectsToBeCopied) {
+            System.out.println();
+            System.out.println(obj);
+        }
+
+
+
+        System.out.println("\nThe program is now terminating. Thanks !");
 
     }
 }

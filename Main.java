@@ -5,11 +5,22 @@ import mav.AgriculturalDrone;
 import mav.MAV;
 import multirotor.Multirotor;
 import uav.UAV;
-//Packages are imported so they can be used
 
+/**
+ * Main class that contains methods to find the least and most expensive UAVs
+ * and demonstrates the usage of various flying object classes.
+ *
+ * Assignment 1 Part 1
+ * Written by: Ayush Patel (40285846) and Krishna Patel (40200870)
+ */
 public class Main {
 
-    //Find least and most expensive UAV method is declared
+    /**
+     * Finds and prints the least and most expensive UAV from an array of flying objects.
+     *
+     * @param flyingObjects is an array of objects some of which may be UAVs
+     */
+
     public static void findLeastAndMostExpensiveUAV(Object[] flyingObjects) {
 
         //least and most expensive uav variables are declared and set to null
@@ -55,6 +66,11 @@ public class Main {
         }
     }
 
+    /**
+     * The main method where the program execution begins.It creates multiple flying objects,
+     * prints their details, and finds the least and most expensive UAVs.
+     *
+     */
     public static void main(String[] args) {
 
         // 25 objects created with updated values
@@ -93,7 +109,9 @@ public class Main {
         //Second array is declared and filled with objects that are NOT UAVs
         Object[] flyingObjects2 = {a1,m1,h1,q1,a2,h2,q2,m2,h3,q3,a3,a5,h4,q4,m3};
 
-        //For each loop prints and displays information about each element from the first array using toString methodd
+        //For each loop prints and displays information about each element from the first array using toString method
+        System.out.println("\nHere is the information in the array flyingObjects1:");
+        System.out.println("------------------------------------------------------");
         for(Object obj : flyingObjects1) {
             System.out.println();
             System.out.println(obj.toString());
@@ -112,6 +130,11 @@ public class Main {
         System.out.println("\n\n----------------------");
         System.out.println("Is uav2 equal to uav3?: " + uav2.equals(uav3)); //Checks if uav2 is equals to uav3 and prints true since they are equal
         System.out.println("Is uav2 equal to uav4?: " +uav2.equals(uav4));//Checks if uav2 is equals to uav4 and prints false since they are not equal
+
+
+        System.out.println("\nThe program is now terminating. Thanks !");
+
+
 
 
     }

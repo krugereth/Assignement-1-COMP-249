@@ -1,5 +1,4 @@
 package helicopter;
-
 import airplane.Airplane;
 
 public class Helicopter extends Airplane {

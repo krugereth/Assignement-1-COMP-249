@@ -1,5 +1,4 @@
 package multirotor;
-
 import helicopter.Helicopter;
 
 public class Multirotor extends Helicopter {

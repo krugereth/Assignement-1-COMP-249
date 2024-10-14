@@ -61,6 +61,6 @@ public class MAV extends UAV {
     //toString method to display relevant information
     @Override
     public String toString() {
-        return "The model of this MAV is manufactured by " + model + " and is " + size + " cm tall.";
+        return "The model of this MAV is manufactured by " + model + " and is " + size + " cm tall." + super.toString();
     }
 }

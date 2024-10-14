@@ -1,7 +1,5 @@
 package uav;
 
-
-
 public class UAV  {
 
     //Protected variables because subclasses needs access to these variables

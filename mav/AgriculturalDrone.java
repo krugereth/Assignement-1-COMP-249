@@ -1,5 +1,4 @@
 package mav;
-
 import uav.UAV;
 
 public class AgriculturalDrone extends UAV {
